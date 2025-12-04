@@ -1,15 +1,10 @@
 import express from "express";
-import fetch from "node-fetch";
 
 const app = express();
 app.use(express.json());
 
-app.post("/estimate", async (req, res) => {
-  try {
-    res.json({ message: "Backend is working!" });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+app.post("/estimate", (req, res) => {
+  res.json({ message: "Backend is ready for AI logic!" });
 });
 
 const port = process.env.PORT || 3000;
